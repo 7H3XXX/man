@@ -19,11 +19,12 @@ export default function About() {
         <div className="prose prose-neutral dark:prose-invert dark:prose-p:text-neutral-300/80 mb-6">
           <p>
             Ah, you're here, let me tell you a little story then. My name is
-            Marc-Antoine Ngaba (some call me Marco, but let's stick to the original
-            form), I'm a full-stack developer from Cameroon and I design and
-            build value-driven solutions for today's concerns. I gratuated since
-            a year now and during this time I grew a passion for software
-            quality and design thinking as I worked on various projects.
+            Marc-Antoine Ngaba (some call me Marco, but let's stick to the
+            original form), I'm a full-stack developer from Cameroon and I
+            design and build value-driven solutions for today's concerns. I
+            gratuated since a year now and during this time I grew a passion for
+            software quality and design thinking as I worked on various
+            projects.
           </p>
           <p>
             I believe experiences are our best teachers. It's the reason why I
@@ -82,15 +83,18 @@ export default function About() {
               className="mb-1 py-6 px-5 border-2 border-neutral-700/60 rounded-md hover:scale-[1.03] transition-all hover:border-transparent hover:bg-neutral-800"
               key={index + 1}
             >
-              <Link href={book.href} className="flex gap-3">
+              <Link
+                href={book.href}
+                className="flex flex-col min-[500px]:flex-row items-center gap-4"
+              >
                 <Image
                   src={book.cover}
                   width={150}
                   height={197}
-                  alt="Designing Data-Intensive Applications book cover"
+                  alt="Designing Data-Intensive Applications book cover."
                 />
                 <div className="flex flex-col">
-                  <p className="text-xl font-light">{book.title}</p>
+                  <p className="text-lg sm:text-xl font-light">{book.title}.</p>
                   <p className="text-base text-neutral-500 mt-2">
                     {book.author}
                   </p>
