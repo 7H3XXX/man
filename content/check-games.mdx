@@ -1,0 +1,144 @@
+---
+title: 'Check Games'
+year: '2023'
+category: 'Game development'
+summary: 'The digital version of the Cameroonian family card game. Join an immersive game where you compete against your friends and family.'
+image: '/images/projects/check-games/cover.png'
+href: 'https://join.rune.ai/game?g=eg'
+---
+
+<Intro brief={"Check games is a thrilling Cameroonian 🇨🇲 family card game that's easy to learn and impossible to resist! The game allows up to 8 players and each one has 4 cards when the game is started. Keep the fun going by using powerful actions such as Draw Two, Draw Four, Stop and Order to conquer your opponents. The first player with an empty hand wins the game!"} role="Game developer" responsibilities={["User Interface design", "Game level design"]} team={["Ronaldo Mine, Game developer"]}/>
+
+<Card title="problem" content="Games have always been more than a way to release the pressure, but also a way to share culture, ideas, and connect people. With the popularity of indie games it's still rare to find African games online when there are is a pletora of social games played in Africa that are just not digitize yet." />
+
+There is a wide variety of games available and easy to notice that most of the games are meant to be played alone. In a connected world where it's easy to make friends online, mobile games don't offer different options for players to interact while playing. For social games, it's common to click on a short phrase but in real life, playing has a lot more than just "Haha🤣" or "Got you😏". While it's true that many african creators are trying to convey their culture in games, it's still rare to find a typical board game to play with someone using the rules and the vocabulary created on the continent.
+
+
+<Card title="our vision" content="To add our piece to the edifice and spread a bit of our culture through social interaction, we think about building an immersive and interactive gaming experience that's both easy and fun to have with others." />
+
+
+## Rules
+
+The set has 54 cards with 2 Jokers.<br/>
+A deck classic deck has 4 symbols, and a card can *generally* be red or black.<br/>
+The game is played by 2 to a maximum of 8 players.
+
+### How to play:
+Each player start with a hand of four cards.
+The first player with an empty hand wins the game.
+Before playing his second-to-last card, a player must click the "CHECK" button.
+
+### Special cards
+- The seven, forces the next player to draw 2 cards.
+- The Joker, forces the next player to draw 4 cards.
+- Ace, stops the next player.
+- Jack, forces the next player to play a specific symbol
+- The two goes everywhere.
+
+Special cards can be combined or blocked if they have the same function (*Draw, Stop, Order*).
+
+### Sanctions
+- If the player has no card to play he must draw a card from the bank.
+- If a player doesn't press *CHECK* before playing his second-to-last card he must draw a card from the bank.
+
+## Concept
+The Check Games is all about the fun and the laughters you share with a friend during a match. That's why it's loved and considered the most iconic of his category in Cameroon. To bring a sense of this synergy we chose to use Rune, a platform to build multiplayer games with voice chat.
+
+<Callout emoji="📌">The idea actually popped out when we were brainstorming about the React Jam organized by Rune on the theme Party🎉.</Callout>
+
+<Image src="/images/projects/check-games/rune-room.png" width="672" height="611" alt="Rune's flagship picture for rooms"/>
+
+Rune is a platform that allow developers to focus on making fun and engaging multiplayer games without worrying about netcode, servers, voice chat, matchmaking, spectating, and much more.
+It does this by sharing and syncing the game state and letting the developer act on the state changes from UI to the actual logic of the game.
+
+### Actions
+
+Every play can:
+- Play a card on table (if it matches and it his turn)
+- Draw a card from the bank
+- Enable/disable the microphone
+- Enter/quit a match (if it's an on-going match then he's a spectator)
+- Press the *CHECK* button
+- Force other players to play a specific symbol (if he has a Jack)
+- Stop other players from playing (if he has an Ace)
+- Force other players to draw cards from the bank
+
+### User flow
+
+Here's a diagram which summarizes all the possible actions in the game.
+<Image src="/images/projects/check-games/flowchart.webp" width="672" height="829" alt="Check Games flowchart" />
+
+## Craft
+With such an ambitious project, what if I tell you that it's our first try in game dev ? Hard to believe huh ! Well it is and we treated it like any other project, with a strategic plan and a desire to learn and experiment. We started by planning carefully which steps would guide us towards seeing an actual result. We were focusing not on fancy details such as animations and crazy sound effects but on pretty simple things like MAKING IT WORK.
+
+Game is just a program that's entertaining for a person we called a player. With this definition we thought about it as any other software project. So we used these steps to make something out of the crazy ideas we had.
+
+<Image src="/images/projects/check-games/process.png" width="672" height="65" alt="Activity diagram of the development process"/>
+
+As the picture shows we wanted to have a clear understanding of how real object translate to entities in the game. Each entity caracterized by her own properties and actions. For example a player with a property *hand* for all the cards he has in his hand, and an action *play* to play a card (place it on the deck). Following was the UI/UX or simply put, where does the fun happen and how to make the "house" convey a party mood. To buckle up and make sure everything works fine we implement and test until we have a stable version of the game.
+
+### Main screen
+
+This part was pretty straightforward, having played many games I had an idea about the easiest way to embark in the game and play it without getting tired. The greatest sophistication is simplicity, this quote is hooked in my mind since I heard it and that's how the idea came.
+
+<Image src="/images/projects/check-games/game-screen-draft.jpg" width="672" height="920" alt="Skecth of the main UI of the Check games"/>
+
+The composition it's pretty self explanatory, the largest and the most important part of the game it's where all the fun happen so it occupies more space than the rest. Next to it, the player wants to get a quick look at who's next he has two options: The top of the screen on top of the timer and the right of the main deck.
+
+In this game it's crucial to know how many cards you possess so the number is indicated on top of the hand (the cards you can play). This leaves us with the "Check" button and the bank which are action that affects the hand of the player.
+
+### Theme
+
+React Jam is a competition in which players build games based on a particular context. This jam's theme was "party" and our idea fitted extremely well with it. Having said that, how do we make this game look like a party 🤔 ? The question was a bit hard to answer since a game must include sound, graphic, animations and everything has to form a coherent whole.
+
+That's why we asked... Chat GPT obviously! What did you expect 😏 ?
+
+<Image src="/images/projects/check-games/color-palette.png" width="672" height="288" alt="Check games celestial color palette"/>
+
+Our *Celestial Check Games* color's palette was ready to get your heads up there 👨🏾‍🚀 with stars 🌟 and planets 🪐.
+The palette also has a feel of a disco night which goes well with the party vibe we wear aiming for.
+
+### Welcome complexity
+
+Surprising as it may be, we found it a little hard to understand how Rune actually works at first😅.
+
+The multiplayer aspect can be tricky to implement cause they not only need to be engaging for a player but also make a group of people be in the moment together. This raises issues such as latency, synchronization and roll-backs, all of which are essential to ensure that the game runs smoothly. When it's true that Rune handles most of it, it's still the devs role based on the constraints of the platform to make sure every player sees the same thing when the inputs are the same.
+
+**Timer sync** - Every player needs to see the remaining time for a specific turn and the animation has to be in perfect sync for every player in the room. Other elements like the current turn depend on the timer so if the timer is broken every player would received additional cards or see a different player's turn.
+
+A closer looked revealed that we had to use the `requestAnimationFrame` for a smooth animation that render well on every connected devices and allow us to have a precise control over the animation.
+<Image src="/images/projects/check-games/timer.gif" width="580" height="340" alt="Turn timer animation"/>
+
+Card twins** - Let's get technical for a sec, may I ? This one was a little misleading because it affected the outcome of the game. A player can have a card already played that is not yet in the cards bank. With this a player that was tricked by his opponent could reverse the situation because of this bug.
+
+We later found that the problem occured because of a scoping problem (the fundamentals are really valuable in those situations). We ended up copying the global array of cards in a local scope, then used it for actions in the game and voila!
+
+**Sound effects** - A game without his mythic sounds is like watching a well-know music band during a session without hearing what they produce. Sound has to be on time, match the tone and the mood of the action, not disturbing from the actual show. Sounds were playing late most of the time, not in sync and sometimes didn't at all.
+
+We handled it by using a library called howler, which allowed us to load sounds on time even if they were played for the first time. After a sound has been played, it's then buffered for later use.
+
+## UX Enhancement
+
+At this point we noticed the game could be better. Better in displaying what the user really cares about, feedbacks. The version was lacking some context after an action was performed and that made the game not really interactive even with an appreciated gameplay.
+
+**Draw feedback** - After a player plays a Draw x special card, we compute an aggregate of the number of cards to be drawn and display it on the card bank icon.
+
+<Image src="/images/projects/check-games/bank.gif" width="460" height="580" alt="Number of cards to draw animation over cards bank icon"/>
+
+**Change player's name by avatar** - Some players have very long names and we thought we could do better when displaying the players in the room, the first approach was just not good enough and filled the UI with meaningless information. We replaced the initials of the player's name by their avatar on the platform, that little change had a great impact on the UI.
+
+**Indicators** - Having a whole component only to list players in the room was a waste of space. We wanted a livelier component that would blend in with the game. So with added some interactivity to this component by:
+
+- Indicate with a pink ring which player is to play (*on the left*).
+- Graying out the other players in the room except the current one. 
+- Add a pulse animation when a player has two cards left (*on the right*).
+
+<TwoSection>
+<Image src="/images/projects/check-games/player-turn.gif" style={{width:'44%', height:"auto"}} width="360" height="480" alt="Player turn rotation"/>
+<Image src="/images/projects/check-games/pulse.gif" style={{width:'44%', height:"auto"}} width="360" height="480" alt="Pulse animation over player avatar"/>
+</TwoSection>
+
+## Stats
+After one week the game had over **5000 players** and was played during **400+ hours**. This was a huge achievement for our first game and it really pushed us to continue and progressively improve the user experience. Adding the AI player had significant impact (**+25% more comments**) on how the game is consumed globally, it allowed players to discover the game and play it casually if they don't find an opponent.
+A little survey about the current features in the game showed a **100% satisfaction** from the players and **100% recommendation rate** from all of them.
+<br/>
