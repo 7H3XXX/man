@@ -43,7 +43,7 @@ export default async function TopTracks(){
                 </div>
               </li>
             ))
-          : "Une erreur est survenue"}
+          : "Something went wrong"}
       </>
     );
 }
