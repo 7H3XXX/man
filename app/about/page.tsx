@@ -18,8 +18,8 @@ export default function About() {
         <h2 className="font-bold text-2xl mb-6">About me</h2>
         <div className="prose prose-neutral dark:prose-invert dark:prose-p:text-neutral-300/80 mb-6">
           <p>
-            Ah, you're here let me tell you a little story then. My name is
-            Marc-Antoine Ngaba (some call me Marco, but let's stick to original
+            Ah, you're here, let me tell you a little story then. My name is
+            Marc-Antoine Ngaba (some call me Marco, but let's stick to the original
             form), I'm a full-stack developer from Cameroon and I design and
             build value-driven solutions for today's concerns. I gratuated since
             a year now and during this time I grew a passion for software
@@ -38,8 +38,8 @@ export default function About() {
             designing to the actual product. Unknowingly my humanity was baking
             with how I approach and validate solutions in different contexts
             based on feedbacks. Visual arts (which I'm a fan of, as graphic
-            design practitioner) allowed me to add a sense of structure and
-            exploration to this objective and analytical asset. This le me to a
+            design enthusiast) allowed me to add a sense of structure and
+            exploration to this objective and analytical asset. This led me to a
             composite view of software engineering where the function and the
             form constitute the body and soul of a digital product.
           </p>
@@ -48,7 +48,7 @@ export default function About() {
             and grow a passion for software architecture. From game dev. to
             e-commerce and mobile apps, I worked with great minds in both indie
             and professional contexts. This taught me news ways to solve
-            problems an made me continuously grow in my fullstack role.
+            problems and made me continuously improve in my fullstack role.
           </p>
           <p>
             Outside of tech I like to explore and live boldly, trying new things

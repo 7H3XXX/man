@@ -25,7 +25,7 @@ export const ExperienceData = [
     activities: [
       "Implemented a payment module to provide 100% contact free solution in a pandemic context.",
       "Created models and diagrams to build a strong understanding of the desired outcomes and outputs.",
-      "Addressed and fixed bugs within cross-platform mobile app.",
+      "Addressed and fixed bugs within a cross-platform mobile app.",
     ],
     skills: [
       "React Native",

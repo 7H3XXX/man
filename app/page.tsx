@@ -20,7 +20,6 @@ export default function Page() {
         </span>
         <p className="my-7 text-neutral-300">
           Building value-driven web experiences that solves
-          <br />
           everyday concerns.
         </p>
         <div>
@@ -59,7 +58,7 @@ export default function Page() {
           />
           <ProjectCard
             title="Indomptable Shop"
-            description={`Building modern shopping experience for a streetweat brand named "INDOMPTABLE". Cutting edge e-commerce website with a pinch of magic, and a lot of love.`}
+            description={`Building a modern shopping experience for a streetweat brand named "INDOMPTABLE". Cutting edge e-commerce website with a pinch of magic.`}
             // href="https://bit.ly/indomptableshop"
             // href={"/projects/indomptableshop/case-study"}
             icon="indomptable"
