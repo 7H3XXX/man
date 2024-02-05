@@ -50,6 +50,6 @@ function getMDXData(dir) {
   });
 }
 
-export function getBlogPosts() {
+export function getCaseStudies() {
   return getMDXData(path.join(process.cwd(), "content"));
 }

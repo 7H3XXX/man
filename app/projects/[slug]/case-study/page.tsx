@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CustomMDX } from "app/components/mdx/custom-mdx";
-import { getBlogPosts } from "lib/projects";
+import { getCaseStudies } from "lib/projects";
 import Image from "next/image";
 import Link from "next/link";
 
 export async function generateMetadata({
   params,
 }): Promise<Metadata | undefined> {
-  let project = getBlogPosts().find((project) => project.slug === params.slug);
+  let project = getCaseStudies().find((project) => project.slug === params.slug);
   if (!project) {
     return;
   }
@@ -25,7 +25,7 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: `https://man-portfolio.vercel.app/blog/${project.slug}`,
+      url: `https://man-portfolio.vercel.app/projects/${project.slug}/case-study`,
       images: [
         {
           url: ogImage,
@@ -35,8 +35,8 @@ export async function generateMetadata({
   };
 }
 
-export default function Blog({ params }) {
-  let project = getBlogPosts().find((project) => project.slug === params.slug);
+export default function CaseStudy({ params }) {
+  let project = getCaseStudies().find((project) => project.slug === params.slug);
 
   console.log(params);
 
@@ -58,7 +58,7 @@ export default function Blog({ params }) {
             image: project.metadata.image
               ? `https://man-portfolio.vercel.app${project.metadata.image}`
               : `https://man-portfolio.vercel.app/og?title=${project.metadata.title}`,
-            url: `https://man-portfolio.vercel.app/blog/${project.slug}`,
+            url: `https://man-portfolio.vercel.app/projects/${project.slug}/case-study`,
             author: {
               "@type": "Person",
               name: "Marc-Antoine Ngaba",
