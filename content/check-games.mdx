@@ -65,15 +65,15 @@ Every play can:
 
 ### User flow
 
-Here's a diagram which summarizes all the possible actions in the game.
-<Image src="/images/projects/check-games/flowchart.webp" width="672" height="829" alt="Check Games flowchart" />
+Here's a diagram which summarizes a Check Games match.
+<Image src="/images/projects/check-games/flowchart.webp" width="672" height="854" alt="Check Games flowchart" />
 
 ## Craft
 With such an ambitious project, what if I tell you that it's our first try in game dev ? Hard to believe huh ! Well it is and we treated it like any other project, with a strategic plan and a desire to learn and experiment. We started by planning carefully which steps would guide us towards seeing an actual result. We were focusing not on fancy details such as animations and crazy sound effects but on pretty simple things like MAKING IT WORK.
 
 Game is just a program that's entertaining for a person we called a player. With this definition we thought about it as any other software project. So we used these steps to make something out of the crazy ideas we had.
 
-<Image src="/images/projects/check-games/process.png" width="672" height="65" alt="Activity diagram of the development process"/>
+<Image src="/images/projects/check-games/process.png" width="672" height="110" alt="Activity diagram of the development process"/>
 
 As the picture shows we wanted to have a clear understanding of how real object translate to entities in the game. Each entity caracterized by her own properties and actions. For example a player with a property *hand* for all the cards he has in his hand, and an action *play* to play a card (place it on the deck). Following was the UI/UX or simply put, where does the fun happen and how to make the "house" convey a party mood. To buckle up and make sure everything works fine we implement and test until we have a stable version of the game.
 
@@ -81,7 +81,7 @@ As the picture shows we wanted to have a clear understanding of how real object 
 
 This part was pretty straightforward, having played many games I had an idea about the easiest way to embark in the game and play it without getting tired. The greatest sophistication is simplicity, this quote is hooked in my mind since I heard it and that's how the idea came.
 
-<Image src="/images/projects/check-games/game-screen-draft.jpg" width="672" height="920" alt="Skecth of the main UI of the Check games"/>
+<Image src="/images/projects/check-games/game-screen-draft.jpg" width="672" height="926" alt="Skecth of the main UI of the Check games"/>
 
 The composition it's pretty self explanatory, the largest and the most important part of the game it's where all the fun happen so it occupies more space than the rest. Next to it, the player wants to get a quick look at who's next he has two options: The top of the screen on top of the timer and the right of the main deck.
 
@@ -93,7 +93,7 @@ React Jam is a competition in which players build games based on a particular co
 
 That's why we asked... Chat GPT obviously! What did you expect 😏 ?
 
-<Image src="/images/projects/check-games/color-palette.png" width="672" height="288" alt="Check games celestial color palette"/>
+<Image src="/images/projects/check-games/color-palette.png" width="672" height="336" alt="Check games celestial color palette"/>
 
 Our *Celestial Check Games* color's palette was ready to get your heads up there 👨🏾‍🚀 with stars 🌟 and planets 🪐.
 The palette also has a feel of a disco night which goes well with the party vibe we wear aiming for.
@@ -107,7 +107,7 @@ The multiplayer aspect can be tricky to implement cause they not only need to be
 **Timer sync** - Every player needs to see the remaining time for a specific turn and the animation has to be in perfect sync for every player in the room. Other elements like the current turn depend on the timer so if the timer is broken every player would received additional cards or see a different player's turn.
 
 A closer looked revealed that we had to use the `requestAnimationFrame` for a smooth animation that render well on every connected devices and allow us to have a precise control over the animation.
-<Image src="/images/projects/check-games/timer.gif" width="580" height="340" alt="Turn timer animation"/>
+<Image src="/images/projects/check-games/timer.gif" width="580" height="290" alt="Turn timer animation"/>
 
 Card twins** - Let's get technical for a sec, may I ? This one was a little misleading because it affected the outcome of the game. A player can have a card already played that is not yet in the cards bank. With this a player that was tricked by his opponent could reverse the situation because of this bug.
 
@@ -123,7 +123,7 @@ At this point we noticed the game could be better. Better in displaying what the
 
 **Draw feedback** - After a player plays a Draw x special card, we compute an aggregate of the number of cards to be drawn and display it on the card bank icon.
 
-<Image src="/images/projects/check-games/bank.gif" width="460" height="580" alt="Number of cards to draw animation over cards bank icon"/>
+<Image src="/images/projects/check-games/bank.gif" width="460" height="249" alt="Number of cards to draw animation over cards bank icon"/>
 
 **Change player's name by avatar** - Some players have very long names and we thought we could do better when displaying the players in the room, the first approach was just not good enough and filled the UI with meaningless information. We replaced the initials of the player's name by their avatar on the platform, that little change had a great impact on the UI.
 
