@@ -15,8 +15,8 @@ export async function generateMetadata({
 
   let { title, summary: description, href, image } = project.metadata;
   let ogImage = image
-    ? `https://manman.io${image}`
-    : `https://manman.io/og?title=${title}`;
+    ? `https://man-portfolio.vercel.app${image}`
+    : `https://man-portfolio.vercel.app/og?title=${title}`;
 
   return {
     title,
@@ -25,7 +25,7 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: `https://manman.io/blog/${project.slug}`,
+      url: `https://man-portfolio.vercel.app/blog/${project.slug}`,
       images: [
         {
           url: ogImage,
@@ -56,9 +56,9 @@ export default function Blog({ params }) {
             headline: project.metadata.title,
             description: project.metadata.summary,
             image: project.metadata.image
-              ? `https://man.io${project.metadata.image}`
-              : `https://man.io/og?title=${project.metadata.title}`,
-            url: `https://man.io/blog/${project.slug}`,
+              ? `https://man-portfolio.vercel.app${project.metadata.image}`
+              : `https://man-portfolio.vercel.app/og?title=${project.metadata.title}`,
+            url: `https://man-portfolio.vercel.app/blog/${project.slug}`,
             author: {
               "@type": "Person",
               name: "Marc-Antoine Ngaba",

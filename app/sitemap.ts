@@ -1,7 +1,6 @@
 export default async function sitemap() {
-
   const routes = ["", "/about", "/contact", "/experience", ""].map((route) => ({
-    url: `https://man.io${route}`,
+    url: `https://man-portfolio.vercel.app${route}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));
 

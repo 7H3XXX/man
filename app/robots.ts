@@ -5,7 +5,7 @@ export default function robots() {
         userAgent: "*",
       },
     ],
-    sitemap: "https://man.io/sitemap.xml",
-    host: "https://man.io",
+    sitemap: "https://man-portfolio.vercel.app/sitemap.xml",
+    host: "https://man-portfolio.vercel.app",
   };
 }
