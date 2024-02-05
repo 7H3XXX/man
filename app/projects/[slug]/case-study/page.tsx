@@ -4,25 +4,28 @@ import { CustomMDX } from "app/components/mdx/custom-mdx";
 import { getCaseStudies } from "lib/projects";
 import Image from "next/image";
 import Link from "next/link";
+import { DEFAULT_OG } from "lib/default-og";
 
 export async function generateMetadata({
   params,
 }): Promise<Metadata | undefined> {
-  let project = getCaseStudies().find((project) => project.slug === params.slug);
+  let project = getCaseStudies().find(
+    (project) => project.slug === params.slug
+  );
   if (!project) {
     return;
   }
 
-  let { title, summary: description, href, image } = project.metadata;
+  let { title, summary: description, image } = project.metadata;
   let ogImage = image
     ? `https://man-portfolio.vercel.app${image}`
     : `https://man-portfolio.vercel.app/og?title=${title}`;
 
   return {
-    title,
+    title: `${title}`,
     description,
     openGraph: {
-      title,
+      title: `${title} | ${DEFAULT_OG.openGraph.title}`,
       description,
       type: "article",
       url: `https://man-portfolio.vercel.app/projects/${project.slug}/case-study`,
@@ -31,14 +34,15 @@ export async function generateMetadata({
           url: ogImage,
         },
       ],
+      locale: DEFAULT_OG.openGraph.locale,
     },
   };
 }
 
 export default function CaseStudy({ params }) {
-  let project = getCaseStudies().find((project) => project.slug === params.slug);
-
-  console.log(params);
+  let project = getCaseStudies().find(
+    (project) => project.slug === params.slug
+  );
 
   if (!project) {
     notFound();

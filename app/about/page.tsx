@@ -6,9 +6,14 @@ import { Suspense } from "react";
 import TopTracks from "app/components/top-tracks";
 import { Metadata } from "next";
 import { booksRead } from "lib/data";
+import { DEFAULT_OG } from "lib/default-og";
 
 export const metadata: Metadata = {
   title: "About",
+  openGraph: {
+    ...DEFAULT_OG.openGraph,
+    title: `About | ${DEFAULT_OG.openGraph.title}`,
+  },
 };
 
 export default function About() {

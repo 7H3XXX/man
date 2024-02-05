@@ -1,4 +1,14 @@
+import { DEFAULT_OG } from "lib/default-og";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  openGraph: {
+    ...DEFAULT_OG.openGraph,
+    title: `Contact | ${DEFAULT_OG.openGraph.title}`,
+  },
+};
 
 export default function Contact() {
   return (

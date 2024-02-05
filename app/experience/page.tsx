@@ -1,5 +1,15 @@
 import { Timeline } from "app/components/timeline/timeline";
 import { EducationData, ExperienceData } from "./content";
+import { Metadata } from "next";
+import { DEFAULT_OG } from "lib/default-og";
+
+export const metadata: Metadata = {
+  title: 'Experience',
+  openGraph: {
+    ...DEFAULT_OG.openGraph,
+    title: `Experience | ${DEFAULT_OG.openGraph.title}`
+  }
+}
 
 export default function Experience() {
   return (

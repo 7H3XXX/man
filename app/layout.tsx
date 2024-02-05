@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import Sidebar from "./components/sidebar";
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "./components/footer";
+import { DEFAULT_OG } from "lib/default-og";
 
 const graphik = localFont({
   src: [
@@ -25,19 +26,7 @@ const graphik = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://man-portfolio.vercel.app"),
-  title: {
-    default: "Marc-Antoine Ngaba",
-    template: "%s | Marc-Antoine Ngaba",
-  },
-  description: "Developer, graphic designer, and photographer.",
-  openGraph: {
-    title: "Marc-Antoine Ngaba",
-    description: "Developer, graphic designer, and photographer.",
-    url: "https://man-portfolio.vercel.app",
-    siteName: "Marc-Antoine Ngaba",
-    locale: "en-US",
-    type: "website",
-  },
+  ...DEFAULT_OG,
   robots: {
     index: true,
     follow: true,
