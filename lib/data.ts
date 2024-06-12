@@ -1,10 +1,10 @@
 export const booksRead = [
   {
     title:
-      "Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems",
-    author: "Martin Kleppmann",
-    cover: "https://learning.oreilly.com/library/cover/9781491903063/250w/",
-    href: "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+      "AWS Certified Solutions Architect Study Guide with 900 Practice Test Questions: Associate (SAA-C03) Exam (Sybex Study Guide) 4th Edition",
+    author: "Ben Piper, David Clinton",
+    cover: "https://m.media-amazon.com/images/I/71lr2TYjAJL._SY342_.jpg",
+    href: "https://www.amazon.com/Certified-Solutions-Architect-Study-Guide/dp/1119982626",
   },
 ];
 

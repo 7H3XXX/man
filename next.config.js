@@ -12,7 +12,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "learning.oreilly.com",
+        hostname: "m.media-amazon.com",
         pathname: "/**",
       },
     ],
