@@ -21,7 +21,7 @@ export default function About() {
     <section className="mb-36">
       <div className="mb-20">
         <h2 className="font-bold text-2xl mb-6">About me</h2>
-        <div className="prose prose-neutral dark:prose-invert dark:prose-p:text-neutral-300/80 mb-6">
+        <div className="prose prose-neutral prose-invert prose-p:text-neutral-300/80 mb-6">
           <p>
             Ah, you're here, let me tell you a little story then. My name is
             Marc-Antoine Ngaba (some call me Marco, but let's stick to the

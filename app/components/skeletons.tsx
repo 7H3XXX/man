@@ -1,6 +1,6 @@
 // Loading animation
 const shimmer =
-  "before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent dark:before:from-transparent dark:before:via-neutral-700/70 dark:before:to-transparent";
+  "before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent  before:via-neutral-700/70 before:to-transparent";
 
 export function TrackSkeleton({index}) {
   return (

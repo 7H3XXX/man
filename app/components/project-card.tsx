@@ -25,7 +25,7 @@ export default function ProjectCard({
   return (
     <div className="inline-flex cursor-not-allowed">
       <Link
-        className={`group mb-4 hover:shadow-lg rounded-xl transition duration-200 relative border border-slate-200 dark:border-slate-700 w-full ${
+        className={`group mb-4 hover:shadow-lg rounded-xl transition duration-200 relative border border-slate-700 w-full ${
           !href
             ? "pointer-events-none"
             : ""
@@ -44,9 +44,9 @@ export default function ProjectCard({
           </span>
         ) : null}
         <div className="relative h-full">
-          <span className="absolute w-[40%] -bottom-px right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-          <span className="absolute w-px -left-px top-[50%] h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-          <div className="flex flex-col items-start  dark:border-gray-800 rounded p-4 relative">
+          <span className="absolute w-[40%] -bottom-px right-px h-px bg-gradient-to-r from-blue-400/0 via-blue-400/40 to-blue-400/0"></span>
+          <span className="absolute w-px -left-px top-[50%] h-[40%] bg-gradient-to-b from-blue-400/0 via-blue-400/40 to-blue-400/0"></span>
+          <div className="flex flex-col items-start border-gray-800 rounded p-4 relative">
             {/* */}
             <div className="my-4">
               {icon === "spades" && (
@@ -128,27 +128,27 @@ export default function ProjectCard({
             <div>
               {icon == "more" && (
                 <>
-                  <h4 className="text-lg font-bold tracking-tight text-gray-400 dark:text-gray-100">
+                  <h4 className="text-lg font-bold tracking-tight text-gray-100">
                     {title}
                   </h4>
-                  <p className="leading-7 text-gray-500 dark:text-gray-300">
+                  <p className="leading-7 text-gray-300">
                     {description}
                   </p>
                 </>
               )}
               {icon != "more" && (
                 <>
-                  <h4 className="text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+                  <h4 className="text-xl font-bold tracking-tight text-gray-100">
                     {title}
                   </h4>
-                  <p className="leading-6 pt-4 text-gray-700 dark:text-gray-400/80">
+                  <p className="leading-6 pt-4 text-gray-400/80">
                     {description}
                   </p>
                   <div className="pt-4 flex md:flex-row flex-wrap">
                     {tags?.map((tag, idx) => (
                       <p
                         key={idx}
-                        className={`leading-5 mb-2 dark:border dark:border-zinc-700 text-gray-700 dark:text-gray-300 dark:bg-transparent rounded-md text-xs bg-gray-50  mr-2 px-1`}
+                        className={`leading-5 mb-2 border border-zinc-700 text-gray-300 bg-transparent rounded-md text-xs mr-2 px-1`}
                       >
                         {tag}
                       </p>
@@ -171,7 +171,7 @@ function HoverPattern({ mouseX, mouseY, ...gridProps }) {
   return (
     <div className="pointer-events-none">
       <motion.div
-        className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-100/50 to-teal-100/50 opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#202D2E] dark:to-[#303428]"
+        className="absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 transition duration-300 group-hover:opacity-100 from-[#202D2E] to-[#303428]"
         style={style}
       />
       <motion.div

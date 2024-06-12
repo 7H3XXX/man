@@ -1,5 +1,26 @@
 import Link from "next/link";
 
+const footerLinks: any = [
+  {
+    links: [
+      { title: "Home", href: "/" },
+      { title: "Projects", href: "#projects" },
+      { title: "Links", href: "#" },
+    ],
+  },
+  {
+    links: [
+      { title: "GitHub", href: "https://github.com/7H3XXX", target: "blank" },
+      { title: "Contact", href: "/contact" },
+      {
+        title: "LinkedIn",
+        href: "https://www.linkedin.com/in/marc-antoine-ngaba",
+        target: "blank",
+      },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <section>
@@ -24,62 +45,21 @@ export default function Footer() {
           </Link>
         </div>
         <div className="flex">
-          <ul className="space-y-2 w-1/2">
-            <li>
-              <Link
-                className="transition-colors hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle text-neutral-500"
-                href={"/"}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="transition-colors hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle text-neutral-500"
-                href={"#projects"}
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="transition-colors hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle text-neutral-500"
-                href={"#"}
-              >
-                Links
-              </Link>
-            </li>
-          </ul>
-          <ul className="space-y-2 w-1/2">
-            <li>
-              <Link
-                className="transition-colors hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle text-neutral-500"
-                href={"https://github.com/7H3XXX"}
-                target="_blank"
-              >
-                GitHub
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="transition-colors hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle text-neutral-500"
-                href={"/contact"}
-              >
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="transition-colors hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle text-neutral-500"
-                href={
-                  "https://www.linkedin.com/in/marc-antoine-ngaba-11816b179"
-                }
-                target="_blank"
-              >
-                LinkedIn
-              </Link>
-            </li>
-          </ul>
+          {footerLinks.map((set:any, index: number) => (
+            <ul className="space-y-2 w-1/2" key={index + "ul"}>
+              {set.links.map((link: any) => (
+                <li className="w-min" key={link.title}>
+                  <Link
+                    href={link.href}
+                    {...(link.target!! ? { target: "_blank" } : null)}
+                    className="transition-colors hover:text-neutral-200 flex align-middle text-neutral-500"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ))}
         </div>
       </div>
     </section>
