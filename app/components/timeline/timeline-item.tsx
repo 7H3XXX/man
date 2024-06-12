@@ -30,11 +30,11 @@ export function TimelineItem({
                 <li key={index}>{activity}</li>
               ))}
             </ul>
-            <div className="pt-4 flex md:flex-row flex-wrap">
+            <div className="pt-4 flex flex-wrap">
               {itemData.skills?.map((tag, idx) => (
                 <p
                   key={idx}
-                  className={`leading-5 dark:border dark:border-zinc-700 text-gray-700 dark:text-gray-300 dark:bg-transparent rounded-md text-xs bg-gray-50 mr-2 px-1`}
+                  className={`leading-5 mb-2 border border-zinc-700 text-gray-300 bg-transparent rounded-md text-xs mr-2 px-1`}
                 >
                   {tag}
                 </p>

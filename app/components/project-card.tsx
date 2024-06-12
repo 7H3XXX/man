@@ -144,7 +144,7 @@ export default function ProjectCard({
                   <p className="leading-6 pt-4 text-gray-400/80">
                     {description}
                   </p>
-                  <div className="pt-4 flex md:flex-row flex-wrap">
+                  <div className="pt-4 flex flex-wrap">
                     {tags?.map((tag, idx) => (
                       <p
                         key={idx}
