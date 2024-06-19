@@ -109,7 +109,7 @@ The multiplayer aspect can be tricky to implement cause they not only need to be
 A closer looked revealed that we had to use the `requestAnimationFrame` for a smooth animation that render well on every connected devices and allow us to have a precise control over the animation.
 <Image src="/images/projects/check-games/timer.gif" width="580" height="290" alt="Turn timer animation"/>
 
-Card twins** - Let's get technical for a sec, may I ? This one was a little misleading because it affected the outcome of the game. A player can have a card already played that is not yet in the cards bank. With this a player that was tricked by his opponent could reverse the situation because of this bug.
+**Card twins** - Let's get technical for a sec, may I ? This one was a little misleading because it affected the outcome of the game. A player can have a card already played that is not yet in the cards bank. With this a player that was tricked by his opponent could reverse the situation because of this bug.
 
 We later found that the problem occured because of a scoping problem (the fundamentals are really valuable in those situations). We ended up copying the global array of cards in a local scope, then used it for actions in the game and voila!
 
