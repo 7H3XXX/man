@@ -111,7 +111,7 @@ export default function CaseStudy({ params }) {
         <span className="opacity-70 text-2xl relative top-0.5">•</span>{" "}
         <span className="w-0.5 inline-block"></span> {project.metadata.year}
       </p>
-      <article className="leading-7 prose prose-quoteless prose-neutral prose-invert prose-img:mx-auto">
+      <article className="leading-7 prose prose-invert text-neutral-300 prose-img:mx-auto">
         <CustomMDX source={project.content} />
       </article>
     </section>

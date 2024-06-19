@@ -51,7 +51,7 @@ function RoundedImage(props) {
 
 function Callout(props) {
   return (
-    <div className="px-4 py-3 border border-neutral-700 bg-neutral-800 rounded p-1 text-sm flex items-center text-neutral-100 mb-8">
+    <div className="px-4 py-3 border border-neutral-700 bg-neutral-800 rounded p-1 text-sm flex items-center text-neutral-200 mb-8">
       <div className="flex items-center w-4 mr-4">{props.emoji}</div>
       <div className="w-full callout">{props.children}</div>
     </div>
@@ -204,7 +204,7 @@ function Card({ title, content }) {
       <h3 className="font-bold mb-2 text-sm uppercase tracking-widest">
         {title}
       </h3>
-      <p className="text-neutral-200">{content}</p>
+      <p className="text-neutral-300">{content}</p>
     </div>
   );
 }
