@@ -7,6 +7,7 @@ import TopTracks from "app/components/top-tracks";
 import { Metadata } from "next";
 import { booksRead } from "lib/data";
 import { DEFAULT_OG } from "lib/default-og";
+import { Book } from "app/components/book/book";
 
 export const metadata: Metadata = {
   title: "About",
@@ -82,28 +83,16 @@ export default function About() {
       </div>
       <div className="mb-20">
         <h2 className="font-bold text-2xl mb-6">What I'm currently reading</h2>
-        <ul className="text-neutral-400">
+        <ul className="mx-auto relative columns-1 min-[500px]:columns-2 md:columns-3 gap-4">
           {booksRead.map((book, index) => (
             <li
-              className="mb-1 py-6 px-5 border-2 border-neutral-700/60 rounded-md hover:scale-[1.03] transition-all hover:border-transparent hover:bg-neutral-800"
+              className="mb-1 py-3"
               key={index + 1}
             >
               <Link
                 href={book.href}
-                className="flex flex-col min-[500px]:flex-row items-center gap-4"
               >
-                <Image
-                  src={book.cover}
-                  width={150}
-                  height={197}
-                  alt="Designing Data-Intensive Applications book cover."
-                />
-                <div className="flex flex-col">
-                  <p className="text-lg sm:text-xl font-light">{book.title}.</p>
-                  <p className="text-base text-neutral-500 mt-2">
-                    {book.author}
-                  </p>
-                </div>
+                <Book cover={book.cover} />
               </Link>
             </li>
           ))}
