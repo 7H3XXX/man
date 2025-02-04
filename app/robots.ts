@@ -5,7 +5,7 @@ export default function robots() {
         userAgent: "*",
       },
     ],
-    sitemap: "https://man-portfolio.vercel.app/sitemap.xml",
-    host: "https://man-portfolio.vercel.app",
+    sitemap: "https://blvcko.space/sitemap.xml",
+    host: "https://blvcko.space",
   };
 }

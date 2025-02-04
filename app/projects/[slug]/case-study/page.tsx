@@ -18,8 +18,8 @@ export async function generateMetadata({
 
   let { title, summary: description, image } = project.metadata;
   let ogImage = image
-    ? `https://man-portfolio.vercel.app${image}`
-    : `https://man-portfolio.vercel.app/og?title=${title}`;
+    ? `https://blvcko.space${image}`
+    : `https://blvcko.space/og?title=${title}`;
 
   return {
     title: `${title}`,
@@ -28,7 +28,7 @@ export async function generateMetadata({
       title: `${title} | ${DEFAULT_OG.openGraph.title}`,
       description,
       type: "article",
-      url: `https://man-portfolio.vercel.app/projects/${project.slug}/case-study`,
+      url: `https://blvcko.space/projects/${project.slug}/case-study`,
       images: [
         {
           url: ogImage,
@@ -60,9 +60,9 @@ export default function CaseStudy({ params }) {
             headline: project.metadata.title,
             description: project.metadata.summary,
             image: project.metadata.image
-              ? `https://man-portfolio.vercel.app${project.metadata.image}`
-              : `https://man-portfolio.vercel.app/og?title=${project.metadata.title}`,
-            url: `https://man-portfolio.vercel.app/projects/${project.slug}/case-study`,
+              ? `https://blvcko.space${project.metadata.image}`
+              : `https://blvcko.space/og?title=${project.metadata.title}`,
+            url: `https://blvcko.space/projects/${project.slug}/case-study`,
             author: {
               "@type": "Person",
               name: "Marc-Antoine Ngaba",

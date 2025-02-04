@@ -7,7 +7,7 @@ export const DEFAULT_OG = {
   openGraph: {
     title: "Marc-Antoine Ngaba",
     description: "Developer, graphic designer, and photographer.",
-    url: "https://man-portfolio.vercel.app",
+    url: "https://blvcko.space",
     images: "/opengraph-image.jpg",
     siteName: "Marc-Antoine Ngaba",
     locale: "en-US",

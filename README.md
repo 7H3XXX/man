@@ -1,4 +1,4 @@
-# man-portfolio.vercel.app
+# blvcko.space
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Deployment**: [Vercel](https://vercel.com)

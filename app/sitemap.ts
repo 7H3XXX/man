@@ -2,12 +2,12 @@ import { getCaseStudies } from "lib/projects";
 
 export default async function sitemap() {
   let projects = getCaseStudies().map((project) => ({
-    url: `https://man-portfolio.vercel.app/projects/${project.slug}/case-study`,
-    lastModified: "2024-01-12",
+    url: `https://blvcko.space/projects/${project.slug}/case-study`,
+    lastModified: "2025-02-04",
   }));
 
   const routes = ["", "/about", "/contact", "/experience", ""].map((route) => ({
-    url: `https://man-portfolio.vercel.app${route}`,
+    url: `https:/blvcko.space${route}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));
 

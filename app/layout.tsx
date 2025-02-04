@@ -25,7 +25,7 @@ const graphik = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://man-portfolio.vercel.app"),
+  metadataBase: new URL("https://blvcko.space"),
   ...DEFAULT_OG,
   robots: {
     index: true,
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   verification: {
-    google: "eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw",
-    yandex: "14d2e73487fa6c71",
+    google: "do5HGukpG-RdwxnQYMAbcRPsKBBtizi_6KOeLF5AaIA",
+    // yandex: "14d2e73487fa6c71",
   },
 };
 
