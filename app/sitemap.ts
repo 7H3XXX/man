@@ -7,7 +7,7 @@ export default async function sitemap() {
   }));
 
   const routes = ["", "/about", "/contact", "/experience", ""].map((route) => ({
-    url: `https:/blvcko.space${route}`,
+    url: `https://blvcko.space${route}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));
 
