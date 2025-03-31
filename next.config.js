@@ -17,13 +17,6 @@ const nextConfig = {
       },
     ],
   },
-  redirects() {
-    try {
-      return get("redirects");
-    } catch {
-      return [];
-    }
-  },
   headers() {
     return [
       {
