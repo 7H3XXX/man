@@ -11,6 +11,9 @@ import { Book } from "app/components/book/book";
 
 export const metadata: Metadata = {
   title: "About",
+  alternates: {
+    canonical: '/about'
+  },
   openGraph: {
     ...DEFAULT_OG.openGraph,
     title: `About | ${DEFAULT_OG.openGraph.title}`,

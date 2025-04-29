@@ -18,17 +18,20 @@ export async function generateMetadata({
 
   let { title, summary: description, image } = project.metadata;
   let ogImage = image
-    ? `https://blvcko.space${image}`
-    : `https://blvcko.space/og?title=${title}`;
+    ? `https://www.blvcko.space${image}`
+    : `https://www.blvcko.space/og?title=${title}`;
 
   return {
     title: `${title}`,
     description,
+    alternates: {
+      canonical: `/projects/${project.slug}/case-study`
+    },
     openGraph: {
       title: `${title} | ${DEFAULT_OG.openGraph.title}`,
       description,
       type: "article",
-      url: `https://blvcko.space/projects/${project.slug}/case-study`,
+      url: `https://www.blvcko.space/projects/${project.slug}/case-study`,
       images: [
         {
           url: ogImage,
@@ -60,9 +63,9 @@ export default function CaseStudy({ params }) {
             headline: project.metadata.title,
             description: project.metadata.summary,
             image: project.metadata.image
-              ? `https://blvcko.space${project.metadata.image}`
-              : `https://blvcko.space/og?title=${project.metadata.title}`,
-            url: `https://blvcko.space/projects/${project.slug}/case-study`,
+              ? `https://www.blvcko.space${project.metadata.image}`
+              : `https://www.blvcko.space/og?title=${project.metadata.title}`,
+            url: `https://www.blvcko.space/projects/${project.slug}/case-study`,
             author: {
               "@type": "Person",
               name: "Marc-Antoine Ngaba",

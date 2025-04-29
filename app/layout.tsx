@@ -25,7 +25,6 @@ const graphik = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://blvcko.space"),
   ...DEFAULT_OG,
   robots: {
     index: true,
@@ -44,7 +43,6 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "do5HGukpG-RdwxnQYMAbcRPsKBBtizi_6KOeLF5AaIA",
-    // yandex: "7e7cf15050a79593",
     yandex: "254fe3be9245242b",
   },
 };

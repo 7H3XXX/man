@@ -5,6 +5,9 @@ import { DEFAULT_OG } from "lib/default-og";
 
 export const metadata: Metadata = {
   title: 'Experience',
+  alternates: {
+    canonical: '/experience'
+  },
   openGraph: {
     ...DEFAULT_OG.openGraph,
     title: `Experience | ${DEFAULT_OG.openGraph.title}`

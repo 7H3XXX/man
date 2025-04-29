@@ -4,6 +4,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact",
+  alternates: {
+    canonical: '/contact'
+  },
   openGraph: {
     ...DEFAULT_OG.openGraph,
     title: `Contact | ${DEFAULT_OG.openGraph.title}`,
