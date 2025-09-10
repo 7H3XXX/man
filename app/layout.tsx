@@ -40,6 +40,8 @@ export const metadata: Metadata = {
   twitter: {
     title: "Marc-Antoine Ngaba",
     card: "summary_large_image",
+    site: "Marc-Antoine Ngaba",
+    description: DEFAULT_OG.description!,
   },
   verification: {
     google: "do5HGukpG-RdwxnQYMAbcRPsKBBtizi_6KOeLF5AaIA",
@@ -55,10 +57,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(
-        "text-white bg-[#111010]",
-        graphik.variable
-      )}
+      className={clsx("text-white bg-[#111010]", graphik.variable)}
     >
       <body className="antialiased max-w-2xl mb-20 flex flex-col md:flex-row mt-8 mx-auto bg-[#111010]">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-6 sm:px-10 md:px-0">
