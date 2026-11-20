@@ -110,7 +110,7 @@ export default function Page() {
             description="The merchant app and back office of a payment platform that powered 15,000+ businesses in French-speaking Africa. Active users grew by 200% in 7 months."
             href="/projects/lygos/case-study"
             icon="payments"
-            tags={["Next.js", "TypeScript", "Server-Sent Events", "Fintech"]}
+            tags={["Next.js", "TypeScript", "Real-time", "Fintech"]}
           />
           <ProjectCard
             title="Enterprise UI"
