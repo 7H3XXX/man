@@ -52,7 +52,7 @@ export default function CaseStudy({ params }) {
   }
 
   return (
-    <section>
+    <section className="mb-36">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -106,10 +106,13 @@ export default function CaseStudy({ params }) {
         priority
         alt={`${project.metadata.title} cover picture`}
       />
-      {project.metadata.href ? (
+      {project.metadata.href && project.metadata.href !== "#" ? (
         <Link
           href={project.metadata.href}
-          className="flex w-max items-center group gap-2.5"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${project.metadata.title}, open the live project in a new tab`}
+          className="flex w-max max-w-full items-center group gap-2.5"
         >
           <h1 className="font-bold text-2xl min-[600px]:text-4xl tracking-tighter">
             {project.metadata.title}
