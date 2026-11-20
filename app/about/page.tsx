@@ -1,9 +1,6 @@
-import { TopTracksSkeleton } from "app/components/skeletons";
 import { images } from "lib/images";
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
-import TopTracks from "app/components/top-tracks";
 import { Metadata } from "next";
 import { booksRead } from "lib/data";
 import { DEFAULT_OG } from "lib/default-og";
@@ -99,16 +96,6 @@ export default function About() {
               </Link>
             </li>
           ))}
-        </ul>
-      </div>
-      <div className="mb-20">
-        <h2 className="font-bold text-2xl mb-6" id="top-tracks">
-          Tracks I fell in love with
-        </h2>
-        <ul className="text-neutral-400">
-          <Suspense fallback={<TopTracksSkeleton />}>
-            <TopTracks />
-          </Suspense>
         </ul>
       </div>
       <p className="font-bold text-2xl mb-6">
