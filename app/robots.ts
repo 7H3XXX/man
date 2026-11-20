@@ -5,7 +5,7 @@ export default function robots() {
         userAgent: "*",
       },
     ],
-    sitemap: "https://blvcko.space/sitemap.xml",
-    host: "https://blvcko.space",
+    sitemap: "https://www.blvcko.space/sitemap.xml",
+    host: "https://www.blvcko.space",
   };
 }
