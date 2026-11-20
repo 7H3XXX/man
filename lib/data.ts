@@ -1,24 +1,21 @@
 export const booksRead = [
   {
-    title:
-      "AWS Certified Solutions Architect Study Guide with 900 Practice Test Questions: Associate (SAA-C03) Exam (Sybex Study Guide) 4th Edition",
-    author: "Ben Piper, David Clinton",
-    cover: "https://m.media-amazon.com/images/I/71lr2TYjAJL._SY576_.jpg",
-    href: "https://a.co/d/2jgyVFx",
+    title: "The Personal MBA",
+    author: "Josh Kaufman",
+    cover: "/images/books/personal-mba.jpg",
+    href: "https://personalmba.com",
   },
   {
-    title:
-      "Learning JavaScript Design Patterns: A JavaScript and React Developer's Guide 2nd Edition",
-    author: "Addy Osmani",
-    cover: "https://m.media-amazon.com/images/I/81LpyFBbo8L._SY576_.jpg",
-    href: "https://a.co/d/1DN1mhp",
+    title: "Advanced React",
+    author: "Nadia Makarevich",
+    cover: "/images/books/advanced-react.jpg",
+    href: "https://www.advanced-react.com",
   },
   {
-    title:
-      "You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life",
-    author: "Jen Sincero",
-    cover: "https://m.media-amazon.com/images/I/710GUve5H-L._SY576_.jpg",
-    href: "https://a.co/d/47tcFK6",
+    title: "Precolonial Black Africa",
+    author: "Cheikh Anta Diop",
+    cover: "/images/books/precolonial-black-africa.jpg",
+    href: "https://www.amazon.com/dp/1556520883",
   },
 ];
 

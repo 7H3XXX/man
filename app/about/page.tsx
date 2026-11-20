@@ -92,7 +92,7 @@ export default function About() {
               <Link
                 href={book.href}
               >
-                <Book cover={book.cover} />
+                <Book cover={book.cover} title={book.title} />
               </Link>
             </li>
           ))}
