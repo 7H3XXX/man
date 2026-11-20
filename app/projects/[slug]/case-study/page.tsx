@@ -52,14 +52,14 @@ export default function CaseStudy({ params }) {
   }
 
   return (
-    <section>
+    <section className="mb-36">
       <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
+            "@type": "CreativeWork",
             headline: project.metadata.title,
             description: project.metadata.summary,
             image: project.metadata.image
@@ -69,7 +69,32 @@ export default function CaseStudy({ params }) {
             author: {
               "@type": "Person",
               name: "Marc-Antoine Ngaba",
+              url: "https://www.blvcko.space",
             },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.blvcko.space",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: project.metadata.title,
+                item: `https://www.blvcko.space/projects/${project.slug}/case-study`,
+              },
+            ],
           }),
         }}
       />
@@ -81,10 +106,13 @@ export default function CaseStudy({ params }) {
         priority
         alt={`${project.metadata.title} cover picture`}
       />
-      {project.metadata.href ? (
+      {project.metadata.href && project.metadata.href !== "#" ? (
         <Link
           href={project.metadata.href}
-          className="flex w-max items-center group gap-2.5"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${project.metadata.title}, open the live project in a new tab`}
+          className="flex w-max max-w-full items-center group gap-2.5"
         >
           <h1 className="font-bold text-2xl min-[600px]:text-4xl tracking-tighter">
             {project.metadata.title}

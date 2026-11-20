@@ -34,8 +34,12 @@ export default function Navbar() {
             className="flex flex-col min-[479px]:flex-row items-center justify-between relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
             id="nav"
           >
-            <div className="w-20 min-w-[60px] mb-4 min-[479px]:mb-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 67.47">
+            <Link
+              href="/"
+              aria-label="Marc-Antoine Ngaba, home"
+              className="block w-20 min-w-[60px] mb-4 min-[479px]:mb-0"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 67.47" aria-hidden="true">
                 <g data-name="group 2">
                   <g data-name="group 1">
                     <path
@@ -49,24 +53,27 @@ export default function Navbar() {
                   </g>
                 </g>
               </svg>
-            </div>
+            </Link>
             <div className="flex flex-row space-x-0">
               {Object.entries(navItems).map(([path, { name }]) => {
-                const isActive = path === pathname;
+                const isActive =
+                  path === pathname ||
+                  (path === "/" && pathname.startsWith("/projects"));
                 return (
                   <Link
                     key={path}
                     href={path}
+                    aria-current={isActive ? "page" : undefined}
                     className={clsx(
                       "transition-all hover:text-neutral-200 flex align-middle",
                       {
-                        "text-neutral-500": !isActive,
+                        "text-neutral-400": !isActive,
                       }
                     )}
                   >
                     <span className="relative py-1 px-2">
                       {name}
-                      {path === pathname ? (
+                      {isActive ? (
                         <motion.div
                           className="absolute h-[1px] top-7 mx-2 inset-0 bg-neutral-800 z-[-1] bg-gradient-to-r from-transparent to-neutral-900"
                           layoutId="sidebar"

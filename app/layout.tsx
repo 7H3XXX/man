@@ -60,9 +60,49 @@ export default function RootLayout({
       className={clsx("text-white bg-[#111010]", graphik.variable)}
     >
       <body className="antialiased max-w-2xl mb-20 flex flex-col md:flex-row mt-8 mx-auto bg-[#111010]">
+        <a
+          href="#content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-3 focus:rounded focus:bg-neutral-800 focus:text-neutral-100"
+        >
+          Skip to content
+        </a>
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-6 sm:px-10 md:px-0">
+          <script
+            type="application/ld+json"
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Marc-Antoine Ngaba",
+                url: "https://www.blvcko.space",
+                jobTitle: "Frontend Engineer",
+                description: DEFAULT_OG.description,
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Yaoundé",
+                  addressCountry: "CM",
+                },
+                alumniOf: "Institut Universitaire de la Côte (IUC)",
+                knowsAbout: [
+                  "React",
+                  "TypeScript",
+                  "Next.js",
+                  "Frontend engineering",
+                  "Design systems",
+                  "Three.js",
+                ],
+                sameAs: [
+                  "https://github.com/7H3XXX",
+                  "https://www.linkedin.com/in/marc-antoine-ngaba",
+                ],
+              }),
+            }}
+          />
           <Sidebar />
-          {children}
+          <div id="content" tabIndex={-1} className="outline-none">
+            {children}
+          </div>
           <Analytics />
           <Footer />
         </main>

@@ -1,12 +1,17 @@
 import { getCaseStudies } from "lib/projects";
 
 export default async function sitemap() {
-  let projects = getCaseStudies().map((project) => ({
+  let projects = getCaseStudies()
+    .filter(
+      (project) =>
+        project.metadata.href !== "#" && project.metadata.draft !== "true"
+    )
+    .map((project) => ({
     url: `https://www.blvcko.space/projects/${project.slug}/case-study`,
-    lastModified: "2025-02-04",
+    lastModified: new Date().toISOString().split("T")[0],
   }));
 
-  const routes = ["", "/about", "/contact", "/experience", ""].map((route) => ({
+  const routes = ["", "/experience", "/about", "/contact"].map((route) => ({
     url: `https://www.blvcko.space${route}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));

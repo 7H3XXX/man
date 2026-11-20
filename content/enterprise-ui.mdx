@@ -1,0 +1,59 @@
+---
+title: 'Enterprise UI'
+year: '2026'
+category: 'Product design'
+summary: 'A premium repository of production-ready React blocks inspired by top tier design teams, to help developers and coding agents ship landing and marketing pages faster.'
+image: '/images/projects/enterprise-ui/cover.webp'
+href: 'https://enterprise-ui.indomptable.studio'
+---
+
+<Intro brief={"Enterprise UI is a premium repository of production-ready React blocks inspired by top tier design teams. It helps professionals and coding agents speed up the development of landing and marketing pages, without ending up with the same generic look everybody has."} role="Founder, designer & developer" responsibilities={["Product design", "UI design", "Component development"]}/>
+
+<Card title="problem" content="With AI coding agents, building a landing page became fast and cheap. The problem is that they all started to look the same, and most of them carry the same flaws. Broken on mobile, impossible to use with a keyboard and careless in the details." />
+
+Every time you ask an agent for a hero section, it starts from scratch. Sometimes the result is good, most of the time it forgets the focus states, the dark theme or how the page behaves on a small screen. As a frontend developer I was spending more time fixing generated sections than building the actual product.
+
+<Card title="our vision" content="Give developers and coding agents finished blocks instead of a blank page. Blocks where code quality, accessibility, responsiveness and dark mode are already taken care of, and the code belongs to the team using it." />
+
+## Concept
+
+The idea is pretty simple. An agent is really good at assembling pieces, not so much at taste. So instead of asking it to invent a pricing section, you hand it one that's already right and let it focus on your product.
+
+<Callout emoji="📌">The tagline says it all: Ship trust, not AI slop.</Callout>
+
+<Image src="/images/projects/enterprise-ui/hero.webp" width="672" height="336" alt="The Enterprise UI home page, headed Ship trust, not AI slop"/>
+
+Enterprise UI has 104 items today:
+- 68 blocks, full page sections like Split Hero, Highlighted Pricing, Bento Features, Testimonial Wall, Stats or Split FAQ.
+- 26 components, the UI pieces an app is made of, built on Base UI.
+- 10 effects for motion, like page transitions.
+
+## Craft
+
+Before writing any code I studied how teams like Linear, Vercel and Stripe build trust with their interfaces. The spacing, the restraint, the way motion explains something instead of decorating it. Every block had to hold up next to their work before making it to the library.
+
+**Stack** - Teams don't want another stack to learn. Blocks are built on Next.js, React, Tailwind CSS and shadcn/ui, what most of them already maintain, and they work with Server Components.
+
+**Ownership** - A dependency you can't edit becomes a problem the day you need to change it. So there's no package and no CLI, you copy the source into your repo, run one install command and the code is yours.
+
+<Image src="/images/projects/enterprise-ui/spotlight-pricing.webp" width="672" height="420" alt="The Spotlight Pricing block in the light theme"/>
+
+**Accessibility** - It's usually the first thing generated code forgets. Base UI handles focus, keyboard navigation and screen readers, so it's solved before the block reaches you.
+
+**Themes** - A block that breaks in dark mode is not production-ready. Every block is responsive and ships in light and dark from the same design tokens.
+
+<Image src="/images/projects/enterprise-ui/stacking-cards.webp" width="672" height="420" alt="The Stacking Cards block in the dark theme, one card sliding over the last"/>
+
+**Code quality** - Agents learn from the code they read. Strict TypeScript and lint-clean code mean they reuse the blocks correctly instead of guessing.
+
+<Image src="/images/projects/enterprise-ui/render-hero.webp" width="672" height="378" alt="The Render Hero block, a sculpted arc beside the headline"/>
+
+### Pricing
+
+The free plan has 29 items you can use in commercial work, no card required. The Pro plan unlocks all 104 items with a single payment, client work and future releases included.
+
+## Feedback
+
+We use Enterprise UI ourselves, the [Indomptable Studio website](/projects/indomptable-studio/case-study) is built with its blocks. The first feedback from builders was really encouraging.
+
+<Callout emoji="💬">"I replaced two weeks of front-end work with an afternoon. The blocks looked finished on day one, and I spent the time on the product instead." Dilane Kombou, creator of RasenganJS</Callout>

@@ -1,16 +1,19 @@
 import { Metadata } from "next";
 
-export const DEFAULT_OG: Metadata = {
+export const DEFAULT_OG = {
   title: {
-    default: "Marc-Antoine Ngaba",
+    default: "Marc-Antoine Ngaba, Frontend Engineer (React & TypeScript)",
     template: "%s | Marc-Antoine Ngaba",
   },
   keywords: [
     "Marc-Antoine Ngaba",
+    "frontend engineer",
+    "React developer",
+    "TypeScript",
+    "Next.js developer",
+    "fintech frontend",
+    "Cameroon",
     "portfolio",
-    "next.js developer",
-    "frontend developer",
-    "developer",
   ],
   applicationName: "Marc-Antoine Ngaba",
   generator: "Next.js",
@@ -23,7 +26,8 @@ export const DEFAULT_OG: Metadata = {
   ],
   creator: "Marc-Antoine Ngaba",
   publisher: "Vercel",
-  description: "Developer, graphic designer, and photographer.",
+  description:
+    "Frontend engineer building high-transaction products for SaaS, fintech and finance with React and TypeScript. Payments, real-time dashboards and design systems.",
   category: "Personal Website",
   alternates: {
     canonical: "https://www.blvcko.space",
@@ -31,11 +35,12 @@ export const DEFAULT_OG: Metadata = {
   metadataBase: new URL("https://www.blvcko.space"),
   openGraph: {
     title: "Marc-Antoine Ngaba",
-    description: "Developer, graphic designer, and photographer.",
-    url: "https://blvcko.space",
+    description:
+    "Frontend engineer building high-transaction products for SaaS, fintech and finance with React and TypeScript. Payments, real-time dashboards and design systems.",
+    url: "https://www.blvcko.space",
     images: "/opengraph-image.jpg",
     siteName: "Marc-Antoine Ngaba",
     locale: "en-US",
     type: "website",
   },
-};
+} satisfies Metadata;

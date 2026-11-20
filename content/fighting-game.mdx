@@ -4,7 +4,37 @@ year: '2023'
 category: 'Game development'
 summary: 'Fair and square fight against your biggest opponent in a web environment. Defeat your rival with your weapon and claim the victory.'
 image: '/images/projects/fighting-game/cover.png'
-href: '#'
+href: 'https://7h3xxx.github.io/fighting-game/'
 ---
 
-<Intro brief={"Web technologies can bring numerous type of entertainments to clients all over the world, Gaming is one of those things. Building games for the web is a tedious task especially for newbies. For this project, I wanted to dive in the world of games and know the tools and the thought process of a game developer."} role="Game developer" responsibilities={["User Interface design", "Game logic developer"]}/>
+<Intro brief={"Web technologies can bring numerous types of entertainment to people all over the world, and gaming is one of them. Building games for the web is a tedious task, especially for newbies. For this project, I wanted to dive into the world of games and learn the tools and the thought process of a game developer."} role="Game developer" responsibilities={["User Interface design", "Game logic developer"]}/>
+
+<Card title="the goal" content="Understand what a game engine does for you by doing everything by hand: the game loop, gravity, sprite animations and collisions, with plain JavaScript and a canvas." />
+
+## Rules
+
+Two players, one keyboard and 60 seconds. Each player can move, jump and attack. When a fighter runs out of health or the timer hits zero, the game declares the winner, or a tie if both fighters have the same health.
+
+### How to play
+Player 1 moves with A and D, jumps with W and attacks with Space.<br/>
+Player 2 moves with the left and right arrows, jumps with the up arrow and attacks with the down arrow.
+
+<Image src="/images/projects/fighting-game/gameplay.webp" width="672" height="378" alt="Two samurai facing off in front of a pixel-art shop, with health bars and a timer above them"/>
+
+## Craft
+
+No engine, no library, just a canvas of and JavaScript. Sounds simple ? Well it's not, but it's the best way to understand how a game really works.
+
+**Game loop** - Everything happens inside `requestAnimationFrame`. Each frame clears the canvas and draws the background, the animated shop and both fighters again.
+
+**Gravity** - A constant value pulls the fighters down every frame until they touch the ground, that's what gives jumps their natural arc.
+
+**Sprites** - A `Sprite` class plays the sprite sheets frame by frame, and a `Fighter` class extends it with seven states: idle, run, jump, fall, attack, take hit and death. Each state swaps the sprite sheet so the character always looks like what he's doing.
+
+**Collisions** - Each fighter has an attack box. A hit only counts when this box overlaps the opponent's body during an attack, a simple rectangle on rectangle check.
+
+**Health and timer** - Health bars and the countdown live in the DOM above the canvas, and the game ends as soon as one of them runs out.
+
+## What I learned
+
+After writing the loop, the gravity and the collisions myself, game engines finally made sense. I now understand web games work behind the scenes, how to structure them, and bit more about physics and game loops.
