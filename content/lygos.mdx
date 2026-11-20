@@ -1,0 +1,106 @@
+---
+title: 'Lygos'
+year: '2024–2026'
+category: 'Fintech'
+summary: 'The merchant app and back office of a payment platform that powered more than 15,000 businesses in French-speaking Africa, from payment links and checkout to real-time payment tracking, sandbox and webhooks.'
+image: '/images/projects/lygos/cover.webp'
+href: 'https://lygosapp.com'
+---
+
+<Intro brief={"Lygos was a payment solution for entrepreneurs and businesses in French-speaking Africa. It powered more than 15,000 businesses selling locally and internationally with payment links, a checkout and a payment API built around Mobile Money. From August 2024 to January 2026, I was the frontend engineer behind the merchant app and the back office."} role="Frontend Engineer" responsibilities={["Merchant app", "Back office", "Frontend architecture", "Testing & CI/CD"]} team={["Backend engineers", "Product team"]}/>
+
+<Card title="problem" content="Selling online in French-speaking Africa is still hard. Most customers pay with Mobile Money, not cards, and merchants deal with several operators, currencies and countries at once. They need to get paid fast, know where every payment stands and trust the tool that holds their money." />
+
+For a payment platform, the interface is the product. A confusing form is a lost sale for the merchant, and a payment without a clear status is a support ticket, or worse, a customer who thinks he just lost his money.
+
+<Card title="our vision" content="Make getting paid as simple as sharing a link. A merchant should go from sign up to his first payment in minutes, follow every transaction live and never wonder where his money is." />
+
+## Concept
+
+Lygos served two people at the same time: the merchant who sells and the customer who pays. Each one needed his own experience, and both had to trust it from the first screen.
+
+Here's the journey of a merchant:
+- Sign up with a Mobile Money number and activate the account with a code sent by email
+- Set up the shop: category, type of activity, website and address
+- Create a payment link with pictures, a price in local currency and a promotional price
+- Share the link, the customer pays on the checkout with his Mobile Money operator
+- Follow the revenue and every transaction from the dashboard
+
+<TwoSection>
+<Image src="/images/projects/lygos/signup.webp" style={{width:'44%', height:"auto"}} width="545" height="895" alt="The Lygos sign up form, asking for a name, a Mobile Money number, an email and a password"/>
+<Image src="/images/projects/lygos/activation.webp" style={{width:'44%', height:"auto"}} width="717" height="803" alt="The account activation screen with a six digit code sent by email"/>
+</TwoSection>
+
+Signing up asked for the Mobile Money number first. Lygos bet on what works where it did business, and in French-speaking Africa people mainly pay and get paid with their phone. The activation code came with the two exits people need when an email is late: resend the code or contact support.
+
+## Craft
+
+### Payment links
+
+The payment link was the heart of Lygos. A merchant filled a form and got a page he could share anywhere, on WhatsApp, Instagram or his own website.
+
+<Image src="/images/projects/lygos/payment-link.webp" width="672" height="450" alt="The payment link editor with an image uploader, the product name and the price in XAF"/>
+
+**Edit and preview** - Two tabs, one form. The merchant switched to the preview to see exactly what his customer would see before publishing anything.
+
+**Pictures** - Drag and drop up to 8 images of 5MB each, with a thumbnail and a way to remove each one. The file uploader became a shared component we reused across the products.
+
+**Pricing** - The price was set in local currency, with a tool to calculate the rates by country and an optional promotional price.
+
+**Rich descriptions** - A rich text editor with a live preview, so merchants could describe their products properly and convert more visitors into buyers.
+
+### Checkout
+
+The checkout is where the money moves, so every detail counts. The customer entered his name, email and Mobile Money number, picked his operator, could apply a coupon and saw the final price before paying.
+
+<Image src="/images/projects/lygos/checkout.webp" width="672" height="460" alt="A Lygos checkout for a Photoshop masterclass, with the payment form, the operator choice and a coupon applied"/>
+
+The checkout form and the discount code manager were part of a component kit I built for payments. Each component was reused across the products and covered by automated tests, because a bug in a checkout is never a small bug.
+
+### Real-time payment status
+
+Mobile Money payments are not instant. The customer confirms on his phone, the operator answers, sometimes late. Asking customers to refresh a page to know if they paid was not an option.
+
+With the backend team, we designed a transaction status page that received every update with **Server-Sent Events**. The server talks, the browser listens. We only needed one direction, so it was simpler than WebSockets, and the browser reconnects on its own when the network drops, which happens a lot on mobile.
+
+### Merchant dashboard
+
+Merchants want one answer when they log in: how much did I make? Inspired by Stripe, the dashboard showed the total revenue, today's revenue, the latest orders and charts of the revenue by week, month and year.
+
+### Shop setup
+
+To verify a merchant, Lygos needed to know who he was and where he sold. The address field used Google Places autocomplete with a map, so merchants picked their real location in a couple of keystrokes instead of typing it by hand.
+
+<Image src="/images/projects/lygos/shop-setup.webp" width="672" height="416" alt="The shop setup form with the category, the type of activity, the shop URL and an address field suggesting Bafoussam, Cameroon"/>
+
+### For developers
+
+Lygos also served developers who integrated payments with its API, and they needed a safe place to try before going live.
+
+**Sandbox** - I built the sandbox experience in the dashboard. Developers used test API keys and simulated successful, failed and pending payments with fake data that never reached production.
+
+**Webhooks** - From the Configurations page, a developer added an HTTPS endpoint and picked the events he wanted for payment links, gateway deposits and marketplaces, whether a payment was submitted, completed or failed. Each webhook came with a secret to verify the signature of every request, and the secret could be regenerated from the dashboard.
+
+### Back office
+
+The team needed its own tools to keep the platform safe. I built the internal admin tool to review merchant profiles and investigate transactions, and shipped it faster with Claude Code.
+
+## Engineering
+
+The product grew fast, so the frontend had to stay easy to change for anyone who joined the team.
+
+**Architecture** - I documented the frontend architecture with diagrams and ADRs (Architecture Decision Records), so every important choice came with the reason behind it.
+
+**Coding style** - Our conventions were written down, which kept every pull request consistent and made code reviews about the product, not about the format.
+
+**Performance and refactoring** - Optimizations and refactorings were documented too, so the reasoning stayed long after the change was merged.
+
+**Testing** - End-to-end tests with Playwright covered the flows that couldn't break: register, login, creating a payment link and a client checking out. They ran on top of the automated tests of the shared components.
+
+**CI/CD** - Pipelines on GitHub checked every pull request and shipped the apps to production.
+
+**Translation** - The apps spoke several languages with next-intl.
+
+## Stats
+
+In 7 months, active users grew by **200%**, driven by a simpler and clearer experience. At its peak, Lygos powered more than **15,000 businesses** selling locally and internationally.
