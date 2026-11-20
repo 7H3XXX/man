@@ -4,7 +4,8 @@ const footerLinks: any = [
   {
     links: [
       { title: "Home", href: "/" },
-      { title: "Projects", href: "#projects" },
+      { title: "Work", href: "/#work" },
+      { title: "Experience", href: "/experience" },
       { title: "About", href: "/about" },
     ],
   },
