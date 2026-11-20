@@ -16,17 +16,27 @@ export default function Page() {
           Marc-Antoine
         </h1>
         <span className="text-sm mt-3 inline-block text-neutral-400">
-          Fullstack Web Developer & Solution architect
+          Frontend Engineer · React &amp; TypeScript
         </span>
         <p className="my-7 text-neutral-300">
-          Building value-driven web experiences that solves
-          everyday concerns.
+          Frontend engineer with 4+ years of experience building high-transaction products across SaaS,
+          consumer apps, fintech and finance. Built the
+          merchant revenue dashboard, and real-time payment
+          tracking which helped grow active users by 200% in 7 months @Lygos. Co-built a real-time multiplayer card game with voice chat that reached 5,000+ players in its first week @Check Games.
+          Keen eye for details, React and TypeScript at the core.
         </p>
-        <div>
-          <Link href={"/contact"}>
-            <button className="px-4 py-3 border border-neutral-700 bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-100 mb-8">
-              Get in touch
-            </button>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <Link
+            href="/contact"
+            className="px-4 py-3 border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 transition-colors rounded text-sm inline-flex items-center leading-4 text-neutral-100"
+          >
+            Get in touch
+          </Link>
+          <Link
+            href="#work"
+            className="text-sm text-neutral-400 hover:text-neutral-100 transition-colors py-3"
+          >
+            See my work
           </Link>
         </div>
       </div>
