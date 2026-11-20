@@ -8,6 +8,8 @@ import { Book } from "app/components/book/book";
 
 export const metadata: Metadata = {
   title: "About",
+  description:
+    "Marc-Antoine Ngaba is a frontend engineer from Cameroon building React and TypeScript products for fintech, plus a photographer and graphic design enthusiast.",
   alternates: {
     canonical: '/about'
   },

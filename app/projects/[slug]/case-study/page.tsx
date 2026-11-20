@@ -59,7 +59,7 @@ export default function CaseStudy({ params }) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
+            "@type": "CreativeWork",
             headline: project.metadata.title,
             description: project.metadata.summary,
             image: project.metadata.image
@@ -69,7 +69,32 @@ export default function CaseStudy({ params }) {
             author: {
               "@type": "Person",
               name: "Marc-Antoine Ngaba",
+              url: "https://www.blvcko.space",
             },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.blvcko.space",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: project.metadata.title,
+                item: `https://www.blvcko.space/projects/${project.slug}/case-study`,
+              },
+            ],
           }),
         }}
       />

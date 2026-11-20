@@ -5,6 +5,8 @@ import { DEFAULT_OG } from "lib/default-og";
 
 export const metadata: Metadata = {
   title: 'Experience',
+  description:
+    "Frontend engineering experience at Lygos, freelance product work, open source and education, building React, Next.js and TypeScript products since 2021.",
   alternates: {
     canonical: '/experience'
   },

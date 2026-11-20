@@ -61,6 +61,38 @@ export default function RootLayout({
     >
       <body className="antialiased max-w-2xl mb-20 flex flex-col md:flex-row mt-8 mx-auto bg-[#111010]">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-6 sm:px-10 md:px-0">
+          <script
+            type="application/ld+json"
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Marc-Antoine Ngaba",
+                url: "https://www.blvcko.space",
+                jobTitle: "Frontend Engineer",
+                description: DEFAULT_OG.description,
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Yaoundé",
+                  addressCountry: "CM",
+                },
+                alumniOf: "Institut Universitaire de la Côte (IUC)",
+                knowsAbout: [
+                  "React",
+                  "TypeScript",
+                  "Next.js",
+                  "Frontend engineering",
+                  "Design systems",
+                  "Three.js",
+                ],
+                sameAs: [
+                  "https://github.com/7H3XXX",
+                  "https://www.linkedin.com/in/marc-antoine-ngaba",
+                ],
+              }),
+            }}
+          />
           <Sidebar />
           {children}
           <Analytics />

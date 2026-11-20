@@ -4,6 +4,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact",
+  description:
+    "Get in touch with Marc-Antoine Ngaba, frontend engineer, about a role, a project or a collaboration.",
   alternates: {
     canonical: '/contact'
   },
