@@ -31,10 +31,8 @@ export default function ProjectCard({
             : ""
         }`}
         href={href ?? "#"}
-        aria-label={title}
         aria-disabled={!href}
         tabIndex={!href ? -1 : undefined}
-        rel="noopener noreferrer"
         onMouseMove={onMouseMove}
       >
         <HoverPattern mouseX={mouseX} mouseY={mouseY} />
@@ -168,9 +166,9 @@ export default function ProjectCard({
             <div>
               {icon == "more" && (
                 <>
-                  <h4 className="text-lg font-bold tracking-tight text-gray-100">
+                  <h3 className="text-lg font-bold tracking-tight text-gray-100">
                     {title}
-                  </h4>
+                  </h3>
                   <p className="leading-7 text-gray-300">
                     {description}
                   </p>
@@ -178,9 +176,9 @@ export default function ProjectCard({
               )}
               {icon != "more" && (
                 <>
-                  <h4 className="text-xl font-bold tracking-tight text-gray-100">
+                  <h3 className="text-xl font-bold tracking-tight text-gray-100">
                     {title}
-                  </h4>
+                  </h3>
                   <p className="leading-6 pt-4 text-gray-400/80">
                     {description}
                   </p>

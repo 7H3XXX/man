@@ -33,10 +33,11 @@ export default function Footer() {
                 <li className="w-min" key={link.title}>
                   <Link
                     href={link.href}
-                    {...(link.target!! ? { target: "_blank" } : null)}
-                    className="transition-colors hover:text-neutral-200 flex align-middle text-neutral-500"
+                    {...(link.target ? { target: "_blank", rel: "noopener noreferrer" } : null)}
+                    className="transition-colors hover:text-neutral-200 flex align-middle text-neutral-400 py-1"
                   >
                     {link.title}
+                    {link.target ? <span className="sr-only"> (opens in a new tab)</span> : null}
                   </Link>
                 </li>
               ))}

@@ -163,15 +163,15 @@ function Intro({
       <div className="flex flex-col gap-y-6 min-[479px]:flex-row justify-between sm:justify-start gap-x-24 items-start mt-12">
         <div className="flex flex-col">
           <div className="mb-4">
-            <h4 className="font-bold uppercase text-sm tracking-widest mb-2.5">
+            <h2 className="font-bold uppercase text-sm tracking-widest mb-2.5">
               Role
-            </h4>
+            </h2>
             <p className="text-neutral-400">{role}</p>
           </div>
           <div className="min-w-max">
-            <h4 className="font-bold uppercase text-sm tracking-widest mb-2.5">
+            <h2 className="font-bold uppercase text-sm tracking-widest mb-2.5">
               Responsibilities
-            </h4>
+            </h2>
             {responsibilities.map((responsibility, index) => (
               <p key={index} className="text-neutral-400">
                 {responsibility}
@@ -182,9 +182,9 @@ function Intro({
         <div>
           {team ? (
             <>
-              <h4 className="font-bold uppercase text-sm tracking-widest mb-2.5">
+              <h2 className="font-bold uppercase text-sm tracking-widest mb-2.5">
                 Team
-              </h4>
+              </h2>
               {team.map((teammate, index) => (
                 <p key={index} className="text-neutral-400">
                   {teammate}
