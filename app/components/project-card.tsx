@@ -23,7 +23,7 @@ export default function ProjectCard({
     mouseY.set(clientY - top);
   }
   return (
-    <div className="inline-flex cursor-not-allowed">
+    <div className={`inline-flex ${!href ? "cursor-not-allowed" : ""}`}>
       <Link
         className={`group mb-4 hover:shadow-lg rounded-xl transition duration-200 relative border border-slate-700 w-full ${
           !href
@@ -40,7 +40,7 @@ export default function ProjectCard({
         <HoverPattern mouseX={mouseX} mouseY={mouseY} />
         {!href ? (
           <span className="bg-neutral-500/30 text-neutral-300/80 px-2 py-1 uppercase absolute text-xs rounded-md right-2 top-2">
-            In review
+            Case study soon
           </span>
         ) : null}
         <div className="relative h-full">
@@ -62,6 +62,46 @@ export default function ProjectCard({
                 >
                   <path d="M817.568 348.16C624 204.288 557.312 89.12 512 0l0 0C512 0 512 0 512 0l0 0c-45.28 89.12-112 204.288-305.568 348.16-330.048 245.28-19.392 587.68 253.76 399.232-17.792 116.928-78.528 202.176-140.192 238.88L319.968 1024l192 0 192 0 0-37.728c-61.696-36.704-122.4-121.952-140.224-238.88C836.928 935.808 1147.616 593.44 817.568 348.16z" />
                 </svg>
+              )}
+              {icon === "payments" && (
+                <div className="h-8 w-8 ml-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="32"
+                    height="32"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="2.5" y="5" width="19" height="14" rx="2" />
+                    <path d="M2.5 10h19M6.5 15h4" />
+                  </svg>
+                </div>
+              )}
+              {icon === "blocks" && (
+                <div className="h-8 w-8 ml-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="32"
+                    height="32"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="3" width="8" height="8" rx="1.5" />
+                    <rect x="13" y="3" width="8" height="5" rx="1.5" />
+                    <rect x="13" y="10" width="8" height="11" rx="1.5" />
+                    <rect x="3" y="13" width="8" height="8" rx="1.5" />
+                  </svg>
+                </div>
               )}
               {icon === "indomptable" && (
                 <div className="h-8 w-9 ml-2">
