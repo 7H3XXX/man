@@ -42,11 +42,12 @@ export default function Page() {
       </div>
 
       <div className="mb-36">
-        <h2 className="font-bold text-xl mb-8">Skills</h2>
+        <h2 className="font-bold text-xl mb-8">What I do</h2>
         <Marquee />
       </div>
+
       <div className="mb-36">
-        <h2 className="font-bold text-xl mb-8">Tools + Softwares</h2>
+        <h2 className="font-bold text-xl mb-8">Tools I work with</h2>
         <div className="flex flex-wrap gap-3 justify-center">
           {toolsAndSoftware.map((item, index) => (
             <Bubble key={index} content={item} />

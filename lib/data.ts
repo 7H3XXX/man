@@ -19,4 +19,26 @@ export const booksRead = [
   },
 ];
 
-export const toolsAndSoftware = ["React", "NextJS", "Spring Boot", "Git", "GitHub Project", "HTML", "CSS", "JavaScript", "Node", "MongoDB", "Figma", "Illustrator", "AWS", "Prisma", "Sequelize", "Java", "PostgreSQL", "MySQL", "Zustand", "React Native", "Firebase"]
+export const toolsAndSoftware = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "Tailwind CSS",
+  "React Native",
+  "Zustand",
+  "shadcn/ui",
+  "Base UI",
+  "Framer Motion",
+  "Three.js",
+  "Playwright",
+  "next-intl",
+  "Node.js",
+  "PostgreSQL",
+  "Prisma",
+  "Firebase",
+  "AWS",
+  "Git",
+  "Figma",
+  "Claude Code",
+];

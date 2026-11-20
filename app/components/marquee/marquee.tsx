@@ -19,12 +19,12 @@ export function Marquee() {
         <div className="marquee">
           <div className="marquee__group">
             {[
-              "Web Development",
-              "Software Architecture",
-              "Mobile App Development",
-              "Project management",
-              "Requirement Analysis",
-              "Cloud computing",
+              "Frontend Engineering",
+              "Design Systems",
+              "Real-time Interfaces",
+              "Data Dashboards",
+              "Product Design",
+              "Three.js & WebGL",
             ].map((item, index) => (
               <span key={index} className="text-neutral-400 text-xl">
                 {item}
@@ -34,12 +34,12 @@ export function Marquee() {
 
           <div aria-hidden="true" className="marquee__group">
             {[
-              "Web Development",
-              "Software Architecture",
-              "Mobile App Development",
-              "Project management",
-              "Requirement Analysis",
-              "Cloud computing",
+              "Frontend Engineering",
+              "Design Systems",
+              "Real-time Interfaces",
+              "Data Dashboards",
+              "Product Design",
+              "Three.js & WebGL",
             ].map((item, index) => (
               <span key={index} className="text-neutral-400 text-xl">
                 {item}
@@ -51,7 +51,7 @@ export function Marquee() {
         <div className="marquee marquee--reverse">
           <div className="marquee__group">
             {[
-              "Time management",
+              "Performance",
               "Teamwork",
               "Problem Solving",
               "Adaptability",
@@ -67,7 +67,7 @@ export function Marquee() {
 
           <div aria-hidden="true" className="marquee__group">
             {[
-              "Time management",
+              "Performance",
               "Teamwork",
               "Problem Solving",
               "Adaptability",
